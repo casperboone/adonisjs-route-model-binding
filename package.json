@@ -1,7 +1,7 @@
 {
-  "name": "@adonisjs/route-model-binding",
-  "description": "Route model binding for AdonisJS",
-  "version": "3.0.0-0",
+  "name": "@casperboone/adonisjs-route-model-binding",
+  "description": "Route model binding for AdonisJS 7 (fork of @adonisjs/route-model-binding)",
+  "version": "3.0.0",
   "engines": {
     "node": ">=24.0.0"
   },
@@ -25,7 +25,7 @@
     "precompile": "npm run clean",
     "compile": "tsup-node && tsc --emitDeclarationOnly --declaration",
     "clean": "del-cli build",
-    "prepare": "npm run compile",
+    "prepublishOnly": "npm run build",
     "format": "prettier --write .",
     "lint": "eslint .",
     "pretest": "npm run lint",
@@ -35,20 +35,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adonisjs/route-model-binding.git"
+    "url": "git+https://github.com/casperboone/adonisjs-route-model-binding.git"
   },
   "keywords": [
     "rmb",
     "route-model-binding",
     "route-model",
-    "adonisjs"
+    "adonisjs",
+    "adonisjs-7"
   ],
   "author": "virk,adonisjs",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/adonisjs/route-model-binding/issues"
+    "url": "https://github.com/casperboone/adonisjs-route-model-binding/issues"
   },
-  "homepage": "https://github.com/adonisjs/route-model-binding#readme",
+  "homepage": "https://github.com/casperboone/adonisjs-route-model-binding#readme",
   "dependencies": {
     "@adonisjs/fold": "^11.1.1",
     "@poppinss/utils": "^7.1.2"

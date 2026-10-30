@@ -1,4 +1,8 @@
-> **Fork:** this fork adds support for AdonisJS 7 (`@adonisjs/core` 7, `@adonisjs/lucid` 22) on the `adonisjs-7` branch. Install it as a git dependency: `npm i github:casperboone/adonisjs-route-model-binding#v3.0.0-0`.
+> **Fork:** this fork of [`@adonisjs/route-model-binding`](https://github.com/adonisjs/route-model-binding) adds support for AdonisJS 7 (`@adonisjs/core` 7, `@adonisjs/lucid` 22, Node.js 24). It is published as `@casperboone/adonisjs-route-model-binding`. Install it under the original name with an npm alias, so imports and `node ace configure` keep working unchanged:
+>
+> ```sh
+> npm i @adonisjs/route-model-binding@npm:@casperboone/adonisjs-route-model-binding
+> ```
 
 # @adonisjs/route-model-binding
 
@@ -48,10 +52,10 @@ export default class PostsController {
 Install the package from the npm registry as follows.
 
 ```sh
-npm i @adonisjs/route-model-binding
+npm i @adonisjs/route-model-binding@npm:@casperboone/adonisjs-route-model-binding
 
 # yarn lovers
-yarn add @adonisjs/route-model-binding
+yarn add @adonisjs/route-model-binding@npm:@casperboone/adonisjs-route-model-binding
 ```
 
 Next, configure the package by running the following ace command.
@@ -276,13 +280,13 @@ In order to ensure that the AdonisJS community is welcoming to all, please revie
 ## License
 AdonisJS route model binding is open-sourced software licensed under the [MIT license](LICENSE.md).
 
-[gh-workflow-image]: https://img.shields.io/github/actions/workflow/status/adonisjs/route-model-binding/checks.yml?style=for-the-badge
-[gh-workflow-url]: https://github.com/adonisjs/route-model-binding/actions/workflows/checks.yml "Github action"
+[gh-workflow-image]: https://img.shields.io/github/actions/workflow/status/casperboone/adonisjs-route-model-binding/checks.yml?style=for-the-badge
+[gh-workflow-url]: https://github.com/casperboone/adonisjs-route-model-binding/actions/workflows/checks.yml "Github action"
 
-[npm-image]: https://img.shields.io/npm/v/@adonisjs/route-model-binding/latest.svg?style=for-the-badge&logo=npm
-[npm-url]: https://www.npmjs.com/package/@adonisjs/route-model-binding/v/latest "npm"
+[npm-image]: https://img.shields.io/npm/v/@casperboone/adonisjs-route-model-binding/latest.svg?style=for-the-badge&logo=npm
+[npm-url]: https://www.npmjs.com/package/@casperboone/adonisjs-route-model-binding/v/latest "npm"
 
 [typescript-image]: https://img.shields.io/badge/Typescript-294E80.svg?style=for-the-badge&logo=typescript
 
 [license-url]: LICENSE.md
-[license-image]: https://img.shields.io/github/license/adonisjs/route-model-binding?style=for-the-badge
+[license-image]: https://img.shields.io/github/license/casperboone/adonisjs-route-model-binding?style=for-the-badge
