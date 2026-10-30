@@ -1,4 +1,4 @@
-> **Fork:** this fork adds support for AdonisJS 7 (`@adonisjs/core` 7, `@adonisjs/lucid` 22) on the `adonisjs-7` branch. Install it as a git dependency: `npm i github:casperboone/route-model-binding#v3.0.0-0`.
+> **Fork:** this fork adds support for AdonisJS 7 (`@adonisjs/core` 7, `@adonisjs/lucid` 22) on the `adonisjs-7` branch. Install it as a git dependency: `npm i github:casperboone/adonisjs-route-model-binding#v3.0.0-0`.
 
 # @adonisjs/route-model-binding
 
