@@ -12,7 +12,7 @@
     "!build/bin",
     "!build/tests",
     "!build/examples",
-    "!build/tests_helpers"
+    "!build/test_helpers"
   ],
   "exports": {
     ".": "./build/index.js",
