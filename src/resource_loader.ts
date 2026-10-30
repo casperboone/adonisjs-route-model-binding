@@ -12,7 +12,6 @@ import type { HttpContext } from '@adonisjs/core/http'
 import type { Param, RouteModel, RouteRow } from './types.js'
 
 import string from '@poppinss/utils/string'
-import { HttpRouterService } from '@adonisjs/core/types'
 
 import { ParamsParser } from './params_parser.js'
 import { MissingRelationshipException } from './exceptions/missing_relationship.js'
@@ -52,16 +51,9 @@ import { MissingRelationshipException } from './exceptions/missing_relationship.
  * - Post.findRelatedForRequest() - Define a custom method to lookup Comment for a given post
  */
 export class ResourceLoader {
-  #router: HttpRouterService
-
   resources: Record<string, any> = {}
 
-  constructor(
-    public ctx: HttpContext,
-    router: HttpRouterService
-  ) {
-    this.#router = router
-  }
+  constructor(public ctx: HttpContext) {}
 
   /**
    * Returns true when value is a resource model
@@ -190,7 +182,7 @@ export class ResourceLoader {
     let index = 0
     if (!this.ctx.route!.meta.resolvedParams) {
       this.ctx.route!.meta.resolvedParams = new ParamsParser(
-        this.#router.match(this.ctx.request.url(), this.ctx.request.method())!.route.meta.params,
+        this.ctx.route!.meta.params,
         this.ctx.route!.pattern
       ).parse()
     }

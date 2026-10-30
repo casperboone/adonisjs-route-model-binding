@@ -7,7 +7,7 @@
  * file that was distributed with this source code.
  */
 
-import { Exception } from '@poppinss/utils'
+import { Exception } from '@poppinss/utils/exception'
 
 /**
  * Raised when trying to inject a primitive value like "StringConstructor"

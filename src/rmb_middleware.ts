@@ -69,7 +69,7 @@ export default class RouteModelBindingMiddleware {
     /**
      * Load resources
      */
-    const resourceLoader = new ResourceLoader(ctx, await this.#app.container.make('router'))
+    const resourceLoader = new ResourceLoader(ctx)
     await resourceLoader.load(controllerConstructor['bindings']![method])
     ctx.resources = resourceLoader.resources
 

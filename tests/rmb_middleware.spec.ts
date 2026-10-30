@@ -237,10 +237,6 @@ test.group('Route model binding | middleware', () => {
       declare slug: string
     }
 
-    class PostsController {
-      show(_: HttpContext, __: Post) {}
-    }
-
     await Post.createMany([
       {
         title: 'Hello world',
@@ -252,10 +248,7 @@ test.group('Route model binding | middleware', () => {
       },
     ])
 
-    const ctx = await getContextForRoute(app, '/posts/:post', 'posts/2', 'GET', [
-      PostsController,
-      async () => {},
-    ])
+    const ctx = await getContextForRoute(app, '/posts/:post', 'posts/2', 'GET', async () => {})
 
     await new RouteModelBindingMiddleware(app).handle(ctx, async () => {
       assert.deepEqual(ctx.resources, {})

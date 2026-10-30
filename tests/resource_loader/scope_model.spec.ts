@@ -70,7 +70,7 @@ test.group('Resource Loader | Scoped', () => {
       'GET',
       async () => {}
     )
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await assert.rejects(() => loader.load([Post, Comment]), 'Row not found')
 
     await rollback(await app.container.make('lucid.db'))
@@ -129,7 +129,7 @@ test.group('Resource Loader | Scoped', () => {
       'GET',
       async () => {}
     )
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await loader.load([Post, Comment])
 
     await rollback(await app.container.make('lucid.db'))
@@ -205,7 +205,7 @@ test.group('Resource Loader | Scoped', () => {
       'GET',
       async () => {}
     )
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await loader.load([Post, Comment])
 
     await rollback(await app.container.make('lucid.db'))
@@ -290,7 +290,7 @@ test.group('Resource Loader | Scoped', () => {
       'GET',
       async () => {}
     )
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await loader.load([Post, Comment])
 
     await rollback(await app.container.make('lucid.db'))
@@ -360,7 +360,7 @@ test.group('Resource Loader | Scoped', () => {
       'GET',
       async () => {}
     )
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await assert.rejects(
       () => loader.load([Post, Comment]),
       'Cannot load "comment" for route "/posts/:post/comments/:>comment". Make sure to define it as a relationship on model "Post"'

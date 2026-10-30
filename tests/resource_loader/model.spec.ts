@@ -41,7 +41,7 @@ test.group('Resource Loader', () => {
     ])
 
     const ctx = await getContextForRoute(app, '/posts/:post', 'posts/1', 'GET', async () => {})
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await loader.load([Post])
 
     await rollback(await app.container.make('lucid.db'))
@@ -87,7 +87,7 @@ test.group('Resource Loader', () => {
       'GET',
       async () => {}
     )
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await loader.load([Post])
 
     await rollback(await app.container.make('lucid.db'))
@@ -131,7 +131,7 @@ test.group('Resource Loader', () => {
       'GET',
       async () => {}
     )
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await loader.load([Post])
 
     await rollback(await app.container.make('lucid.db'))
@@ -183,7 +183,7 @@ test.group('Resource Loader', () => {
       'GET',
       async () => {}
     )
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await loader.load([Post])
 
     await rollback(await app.container.make('lucid.db'))
@@ -247,7 +247,7 @@ test.group('Resource Loader', () => {
       'GET',
       async () => {}
     )
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await loader.load([Post, Comment])
 
     await rollback(await app.container.make('lucid.db'))
@@ -316,7 +316,7 @@ test.group('Resource Loader', () => {
       'GET',
       async () => {}
     )
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await loader.load([Post, Comment])
 
     await rollback(await app.container.make('lucid.db'))
@@ -382,7 +382,7 @@ test.group('Resource Loader', () => {
       'GET',
       async () => {}
     )
-    const loader = new ResourceLoader(ctx, await app.container.make('router'))
+    const loader = new ResourceLoader(ctx)
     await loader.load([null, Comment])
 
     await rollback(await app.container.make('lucid.db'))

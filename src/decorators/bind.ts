@@ -13,7 +13,7 @@ import type { ContainerProvider } from '@adonisjs/fold/types'
 import { defineStaticProperty } from '@poppinss/utils'
 
 import { resolveRouteHandler } from '../utils.js'
-import { ApplicationService } from '@adonisjs/core/types'
+import { type ApplicationService } from '@adonisjs/core/types'
 
 /**
  * Automatically query Lucid models for the current HTTP

@@ -116,7 +116,7 @@ export async function getContextForRoute(
     })
     .create()
   ctx.route = router.findOrFail(route)
-  ctx.params = router.match(ctx.request.url(), ctx.request.method())?.params ?? {}
+  ctx.params = router.match(ctx.request.url(), ctx.request.method(), true)?.params ?? {}
 
   return ctx
 }

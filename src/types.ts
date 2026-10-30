@@ -1,5 +1,5 @@
 import type { HttpContext } from '@adonisjs/core/http'
-import type { Constructor } from '@adonisjs/core/types/container'
+import type { Constructor } from '@adonisjs/core/types/common'
 import type { LucidModel, LucidRow } from '@adonisjs/lucid/types/model'
 
 export type Controller = Constructor<any> & {

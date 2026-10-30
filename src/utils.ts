@@ -1,9 +1,9 @@
-import type { LazyImport } from '@adonisjs/core/types/http'
-import type { Constructor } from '@adonisjs/core/types/container'
+import type { LazyImport } from '@adonisjs/core/types/common'
+import type { Constructor } from '@adonisjs/core/types/common'
 
 import is from '@adonisjs/core/helpers/is'
-import { Controller } from './types.js'
-import { ApplicationService } from '@adonisjs/core/types'
+import { type Controller } from './types.js'
+import { type ApplicationService } from '@adonisjs/core/types'
 
 /**
  * Resolve route handler.
